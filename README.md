@@ -1,4 +1,4 @@
-#Project
+# Code Journal
 ##### by Kenneth Black
 
 Learning Journal made with Django
