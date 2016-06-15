@@ -1,0 +1,102 @@
+#journal, .entry-detail {
+  color: #3b8e40;
+  margin: 20px auto;
+  width: 95%;
+  max-width: 52em; }
+#journal h1 {
+  margin-bottom: 20px;
+}
+#journal .entry, .entry-detail {
+  color: #ddd;
+  background-color: #222428;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  margin-bottom: 1.5em;
+  padding-bottom: 1em;
+  display: table;
+  max-width: 50em;
+  width: 100%; }
+.entry-detail {
+  padding: 1em;
+}
+@media screen and (max-width:56.25em) {
+  #journal {
+    margin: 0;
+  }
+}
+#journal .entry:hover, #journal .entry:active {
+  color: #3b8e40;
+}
+
+#journal .entry {
+  position: relative;
+  padding: 1em;
+  width: 100%; }
+#journal .entry  .title {
+  font-size: 1em;
+  margin: 0.5em; }
+#journal .entry  .date {
+  line-height: 1.5em;
+  margin: 0; }
+
+#journal .entry .skills {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+@media screen and (max-width:37.5em) {
+  #journal .entry .skills {
+    position: relative;
+    margin: auto;
+    width: 258px;
+    height: 86px;
+  }
+}
+@media screen and (max-width: 56.25em) {
+  .entry-detail {
+    width: 92%;
+    margin: auto;
+  }
+}
+
+.skill {
+  text-align: center;
+  border-radius: 3px;
+  height: 54px;
+  width: 54px;
+  padding: 0.5em;
+  margin: 0.5em;
+  background-color: #141414;
+}
+
+#journal .skill {
+  float: right;
+}
+.entry-detail .skill {
+  float: left;
+}
+.icon {
+  font-size: 36px;
+  padding: 3px;
+}
+
+.skill.color-pink {
+  color: #BE6C97;
+}
+.skill.color-orange {
+  color: #F7BB67;
+}
+.skill.color-blue {
+  color: #33A9DC;
+}
+
+.skill-text {
+  font-size: 12px;
+  padding-top: 5px;
+  margin: 0;
+}
+
+.entry-detail p {
+  margin-bottom: 40px;
+}

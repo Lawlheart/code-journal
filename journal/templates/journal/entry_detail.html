@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% load static from staticfiles %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/journal.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="entry-detail">
+        <h1>{{ entry.title }}</h1>
+        <h4>{{ entry.date | date:"D d, M Y" }}</h4>
+        <p>{{ entry.content }}</p>
+        <h3>Skills</h3>
+        <div class="skills">
+            {% for skill in entry.skills.all|slice:":3" %}
+                <div class="skill color-{{ skill.color }}">
+                    <i class="icon {{ skill.icon }} color-{{ skill.color }}"></i>
+                    <p class="skill-text">{{skill}}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    {% block style %}{% endblock %}
+</head>
+<body>
+    <div class="site-container">
+        <nav>
+            <h1>Coding Log</h1>
+            <ul class="right">
+                <li><a href="/">Home</a></li>
+            </ul>
+        </nav>
+        {% block content %}{% endblock %}
+    </div>
+  <!--Footer-->
+  <footer class="clearfix">
+      <p>Code By Kenneth Black</p>
+    <a href="http://lawlietblack.com" target="_blank">
+      <img src="{% static 'img/icons/portfolio.png' %}" alt="Portfolio Logo" class="social-icon"></a>
+    <a href="https://github.com/LawlietBlack" target="_blank">
+      <img src="{% static 'img/icons/git.png' %}" alt="Github Logo" class="social-icon"></a>
+    <a href="https://twitter.com/LawlietBlack" target="_blank">
+      <img src="{% static 'img/icons/twitter.png' %}" alt="Twitter Logo" class="social-icon"></a>
+    <a href="https://teamtreehouse.com/kennethblack" target="_blank">
+      <img src="{% static 'img/icons/treehouse.png' %}" alt="Treehouse Logo" class="social-icon"></a>
+    <a href="https://www.linkedin.com/in/kennethrblack" target="_blank">
+      <img src="{% static 'img/icons/linkedin.png' %}" alt="LinkedIn Logo" class="social-icon"></a>
+    <a href="http://freecodecamp.com/lawlietblack" target="_blank">
+      <img src="{% static 'img/icons/fcc.png' %}" alt="FreeCodeCamp Logo" class="social-icon"></a>
+  </footer>
+</body>
+</html>
